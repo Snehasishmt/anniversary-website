@@ -1,0 +1,201 @@
+<!-- memories.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Memories 💞</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(45deg, #fad0c4, #ffd1ff, #fcb69f);
+      background-size: 400% 400%;
+      animation: gradient 18s ease infinite;
+      color: #333;
+      padding: 40px 20px;
+    }
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #e91e63;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto 60px auto;
+    }
+    .gallery img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .letter {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    .letter h2 {
+      font-family: 'Great Vibes', cursive;
+      color: #d81b60;
+      margin-bottom: 20px;
+      font-size: 2em;
+      text-align: center;
+    }
+    .back-button {
+      display: block;
+      margin: 50px auto 20px auto;
+      padding: 12px 30px;
+      background: #e91e63;
+      color: #fff;
+      border: none;
+      font-size: 1em;
+      border-radius: 25px;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.3s;
+      width: fit-content;
+    }
+    .back-button:hover {
+      background: #c2185b;
+    }
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: #ff4081;
+      top: -10px;
+      animation: fall 5s linear infinite;
+      z-index: 999;
+      opacity: 0.8;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotateZ(360deg);
+      }
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 15px 2px;
+      }
+      h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        max-width: 100vw;
+        margin-bottom: 30px;
+      }
+      .gallery img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        aspect-ratio: 1/1;
+        margin: 0 auto;
+        display: block;
+        border-radius: 10px;
+      }
+      .letter {
+        padding: 14px;
+        font-size: 1em;
+      }
+      .letter h2 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+      .back-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+        margin: 30px auto 10px auto;
+      }
+      .confetti {
+        width: 7px;
+        height: 7px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+  <source src="Tum Se Hi Jab We Met 320 Kbps.mp3" type="audio/mpeg">
+</audio>
+<script>
+  const bgMusic = document.getElementById('bgMusic');
+  const musicTime = localStorage.getItem('musicTime');
+  const musicPlaying = localStorage.getItem('musicPlaying');
+  if (musicTime) {
+    bgMusic.currentTime = parseFloat(musicTime);
+    if (musicPlaying === "true") {
+      bgMusic.play();
+    }
+    localStorage.removeItem('musicTime');
+    localStorage.removeItem('musicPlaying');
+  }
+</script>
+
+<h1>Our Memories 📸</h1>
+
+<div class="gallery">
+  <img src="Gift/1.JPG" />
+  <img src="Gift/2.JPG" />
+  <img src="Gift/3.jpg" />
+  <img src="Gift/4.jpg" />
+  <img src="Gift/5.jpg" />
+  <img src="Gift/6.jpeg" />
+  <img src="Gift/8.jpeg" />
+  <img src="Gift/9.jpeg" />
+  <img src="Gift/4858.jpg" />
+  <img src="Gift/5595.jpg" />
+  <img src="Gift/5878.jpg" />
+  <img src="Gift/7649.jpg" />
+</div>
+
+<div class="letter">
+  <h2>To my Riki 💌</h2>
+  <p>Hey baby, I just want you to know how much I love you and appreciate you. You mean everything to me. I'm sorry if I ever make you upset — I never mean to do that. You are my one and only, and I never want to change that. You are an amazing girlfriend and I know you will be an even more amazing wife someday.</p>
+  <p>With you, everything is perfect. Your existence in my life makes everything better. I love every single thing about you — the way you laugh, the way you tease, the way you care, the way you stay. I never want to let go of you.</p>
+  <p>You have made everything in my life better. Thank you for being you. Just know that I’m here to stay, and I’ll love you forever.</p>
+  <p>Forever yours,  
+  <br><strong>— Maity ❤️</strong></p>
+</div>
+
+<a href="index.html" class="back-button">← Back to Our Time</a>
+
+<script>
+  function createConfetti() {
+    const confetti = document.createElement("div");
+    confetti.className = "confetti";
+    confetti.style.left = Math.random() * window.innerWidth + "px";
+    confetti.style.background = ["#ff4081", "#e91e63", "#ffc0cb"][Math.floor(Math.random() * 3)];
+    confetti.style.animationDuration = (3 + Math.random() * 3) + "s";
+    document.body.appendChild(confetti);
+    setTimeout(() => confetti.remove(), 6000);
+  }
+  setInterval(createConfetti, 200);
+</script>
+
+</body>
+</html>
